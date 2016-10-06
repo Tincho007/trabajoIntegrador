@@ -1,0 +1,223 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700';
+
+@media (max-width: 768px){
+
+	body{
+		background-size: 700%;
+	}
+
+	div#container{
+		max-width: 768px;
+	}
+
+	h1 {
+	    font-size: 20px;
+	    margin: 10px auto;
+	}
+
+	h2{
+		font-size: 15px;
+		margin: auto;
+	    margin-top: 100px;
+	    width: 90%;
+	}
+
+	h3{
+	    font-size: 30px;
+	    margin: 15px auto;
+	}
+
+	div#logoSolucionado{
+		width: 30%;
+    	top: 10px;
+	}
+
+	img.logo_header{
+	  	width: 100%;
+	}
+
+
+	/* //////////////// BOTONES  ////////////////*/
+	nav.main-nav{
+	    width: 30%;
+	    left: 33%;
+	}
+
+	ul li{
+		width: 35%;
+	}
+
+	/* //////////////// FORMULARIO  ////////////////*/
+
+	form#loginHome{
+		width: 40%;
+	    height: 40px;
+	    position: absolute;
+	    right: 15px;
+	    top: 10px;
+	    text-align: center;
+	}
+
+	form#loginHome input{
+		width: 25%;
+	}
+
+	div.registration{
+		width: 85%;
+		height: 750px;
+		margin: auto;
+		margin-top: 80px;
+	}
+
+	/*////////////////// FORMULARIO DE REGISTRO  ///////////////////////*/
+
+	form#registro {
+		width: 95%;
+	    margin: 100px auto;
+	}
+
+	fieldset, fieldset#tipo, fieldset#contacto, fieldset#personal, fieldset#servicios, fieldset#productos {
+	    width: 85%;
+    	margin: 20px 3%;
+	}
+
+	fieldset#personal br, fieldset#contacto br, fieldset#servicios br, fieldset#productos br{
+		display: none;
+	}
+
+	fieldset#personal input, fieldset#contacto input, fieldset#servicios input, fieldset#productos input{
+		width: 95%;
+	    display: block;
+	    margin: 5px 0 5px 5px;
+	    text-align: center;
+	}
+
+	fieldset#servicios input, fieldset#productos input{
+		width: 15px;
+	    display: inline-block;
+	    margin: 5px 0 5px 5px;
+	    text-align: left;
+	}
+
+	fieldset#servicios input.inputAdj, fieldset#productos input.inputAdj{
+		width: 95%;
+	}
+
+	fieldset#personal select, fieldset#contacto select{
+		width: 95%;
+	    display: block;
+	    margin: 5px 0 5px 5px;
+	    text-align: center;
+	}
+
+	fieldset#personal label, fieldset#contacto label {
+	    display: block;
+	}
+
+	form#registro div#botRegistro {
+	    width: 95%;
+	    margin: 10px auto;
+	}
+
+	.bot {
+	    margin: 10px 5px;
+	}
+
+
+	/*////////////////// FINAL Formulario de registro  ///////////////////////*/
+
+	div#social {
+	    width: 40%;
+	}
+
+	div#legal {
+	    width: 45%;
+	}
+
+	small{
+		margin-left: 0;
+	}
+
+	/*////////////////// LOG IN ///////////////////////*/
+
+	form#form_log {
+    	width: 85%;
+    	margin: 100px auto;
+	}
+
+	form#form_log fieldset {
+	    width: 80%;
+	    margin: 15px 7%;
+	}
+
+	form#form_log input#mail, form#form_log input#pass {
+	    width: 80%;
+	    margin: 5px 5%;
+	}
+
+	form#form_log .bot{
+		margin: 18px 40% 0;
+    	display: block;
+	}
+
+	form#form_log br{
+		display: none;
+	}
+
+	form#form_log small {
+	    margin: 14px auto;
+	    display: block;
+	}
+
+
+	/*////////////////// FINAL log in ///////////////////////*/
+
+	/*////////////////// FAQ preguntas frecuentes ///////////////////////*/
+
+	div.faq {
+	    width: 85%;
+	    margin: 100px auto;
+	}
+
+	dl {
+	    width: 90%;
+	    margin: 30px auto;
+	}
+
+	dd {
+	    margin-left: 20px;
+	}
+
+	/*////////////////// FINAL FAQ preguntas frecuentes ///////////////////////*/
+
+	div.buscadorHome{
+		width: 90%;
+		margin: 10px auto;	
+		text-align: left;
+	}
+
+	form#buscaHome{
+		width: 95%;
+	    margin: 10px auto;
+	    position: initial;
+	}
+
+	select#sel_servicio, select#sel_zona, input#empresa_profesional{
+		width: 39%;
+	    height: 30px;
+	    margin: 7px 0 7px 7%;
+	}
+
+	input#empresa_profesional{
+		width: 85%;
+	    height: 30px;
+	    margin: 7px 7%;
+	}
+
+	#botBusca{
+		width: 85%;
+	    height: 32px;
+	    font-size: 16px;
+	    margin: 7px 7%;
+	}
+}
