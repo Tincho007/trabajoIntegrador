@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles_768.css">
     <link rel="stylesheet" href="css/styles_400.css">
-    <script type="text/javascript" src="js/faq.js"></script>
   </head>
   <body>
     <?php require_once('header.php'); ?>
@@ -24,7 +23,7 @@
           <dd> Luego de seleccionar la zona y el servicio que estas buscando, elige el proveedor y desde la opcion contactar,enviaras tus datos y trabajo a realizar, o cantidad y tipos de materieles que necesites.<br>
             El provedor en 48 hs te enviara el presupuesto via e-mail. </dd>
 
-          <dt>¿Los profesionales cuentan con su matrícula correspondiente, dependiendo las especialidades? </dt>
+          <dt>¿Los profesionales cuentan con su matrícula correspondiente? </dt>
           <dd> Todos nuestros porvedores fueron seleccionados, previa evaluacion de antecedentes y constacion de formacion profesional. </dd>
 
           <dt>¿Puedo contratar un servicio sin que incluya materiales?</dt>
@@ -48,6 +47,8 @@
 </html>
 <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script src="server/lib/nicescroll/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/faq.js"></script>
+
 <script type="text/javascript">
   $(document).ready(
     function() { 
