@@ -4,7 +4,7 @@ require_once('php/validar.php');
 session_start();
 
 if(!empty($_SESSION['usuario'])) {
-  header("Location:XXXXXXXXXXXXXXXXX.php");exit;
+  header("Location:exito.php");exit;
 
   $defaultName = '';
   $defaultLastName = '';
@@ -73,9 +73,7 @@ if (!empty($_POST)){
 
     if ($state == true){
 
-      $proveedorServicio = generarProveedorServicio($defaultName, $defaultLastName, $defaultCui, $defaultRegPass, $defaultRegRePass,
-      $defaultRegMail, $defaultReMail, $defaultPhone, $defaultCel, $defaultCalle, $defaultNumero, $defaultProv,
-      $defaultBarrio, $defaultPartido, $defaultProveedorServ);
+      $proveedorServicio = generarProveedorServicio($defaultName, $defaultLastName, $defaultCui, $defaultRegPass, $defaultRegRePass, $defaultRegMail, $defaultReMail, $defaultPhone, $defaultCel, $defaultCalle, $defaultNumero, $defaultProv, $defaultBarrio, $defaultPartido, $defaultProveedorServ);
 
       if(guardarProveedorServicio($proveedorServicio)) {
         header("Location:exito.php");exit;
@@ -87,9 +85,7 @@ if (!empty($_POST)){
 
     if ($state == true){
 
-      $proveedorProducto = generarProveedorProducto($defaultName, $defaultLastName, $defaultCui, $defaultRegPass, $defaultRegRePass,
-      $defaultRegMail, $defaultReMail, $defaultPhone, $defaultCel, $defaultCalle, $defaultNumero, $defaultProv,
-      $defaultBarrio, $defaultPartido, $defaultProveedorProd);
+      $proveedorProducto = generarProveedorProducto($defaultName, $defaultLastName, $defaultCui, $defaultRegPass, $defaultRegRePass, $defaultRegMail, $defaultReMail, $defaultPhone, $defaultCel, $defaultCalle, $defaultNumero, $defaultProv, $defaultBarrio, $defaultPartido, $defaultProveedorProd);
 
       if(guardarProveedorProducto($proveedorProducto)) {
         header("Location:exito.php");exit;
@@ -271,7 +267,7 @@ if (!empty($_POST)){
              <input type="checkbox" name="proveedorServ" value="jardinero">Jardinero
              <input type="checkbox" name="proveedorServ" value="piletero">Piletero<br>
              <input type="checkbox" name="proveedorServ" value="decorador">Decorador<br><br>
-             <p>Adjunte Documentación Respaldatoria</p><br><br><input class="inputAdj" type="file" name="doc_servicios">
+             <p><b>Adjunte documentación respaldatoria</b></p><br><br><input class="inputAdj" type="file" name="doc_servicios">
            </fieldset>
 
            <fieldset id="productos">
@@ -286,7 +282,7 @@ if (!empty($_POST)){
              <input type="checkbox" name="proveedorProd" value="pintor">Articulos de piscina<br>
              <input type="checkbox" name="proveedorServ" value="vivero">Vivero<br><br>
              <br>
-             <p>Adjunte Documentación Respaldatoria</p><br><br><input class="inputAdj" type="file" name="doc_servicios">
+             <p><b>Adjunte documentación respaldatoria</b></p><br><br><input class="inputAdj" type="file" name="doc_productos">
            </fieldset>
            <br>
            <div id="botRegistro">

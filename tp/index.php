@@ -52,7 +52,7 @@ if (!empty($_POST)){
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
