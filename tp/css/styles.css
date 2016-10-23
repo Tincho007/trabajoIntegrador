@@ -9,6 +9,7 @@ body{
 	background-size: 250%;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 div#container{
@@ -16,6 +17,11 @@ div#container{
 	max-width: 1280px;
 	margin: auto;
 	margin-top: 0;
+}
+
+div.registration{
+	width: 100%;
+	margin: auto;
 }
 
 header{
@@ -155,6 +161,29 @@ div.fotos img{
 	margin: auto;
 }
 
+a#goHome{
+	width: 120px;
+	display: inline-block;
+	padding: 5px;
+	background-color: #264663;
+	border-radius: 100px;
+	border: 1px solid #264663;
+	cursor: pointer;
+	color: #fff;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	transition: .3s;
+	margin-top: 50px;
+}
+
+a#goHome:hover{
+	background-color: #fff;
+	color: #264663;
+	transition: .3s;
+}
+
 /* //////////////// FORMULARIO  ////////////////
 form{
 	display: inline-block;
@@ -246,6 +275,24 @@ fieldset#tipo{
     margin: 30px 24%;
 }
 
+fieldset#exito{
+	width: 55%;
+    border: none;
+    border-top: 1px solid #264663;
+    display: inline-block;
+    margin: 30px 20%;
+}
+
+div.exito{
+	width: 60%;
+	margin: 100px auto;
+	background-color: rgba(255, 255, 255, .9);
+	padding: 10px;
+	border: none;
+	border-radius: 15px;
+    display: block;
+}
+
 fieldset#personal{
 	display: none;
 }
@@ -311,6 +358,7 @@ input{
 
 /*////////////////// FORMULARIO DE REGISTRO  ///////////////////////*/
 form#registro{
+	width: 100%;
 	margin: 100px auto 150px auto;
 	background-color: rgba(255, 255, 255, .9);
 	padding: 10px;
