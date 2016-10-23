@@ -206,18 +206,20 @@ if (errores == false) {   //si no hay errores entonces hacer ajax
       var miRespuesta;
 
       ajax2.onreadystatechange = function() {
+        var nombre = document.getElementById('name');
+
         if (ajax2.readyState == 4 && ajax2.status == 200){
           miRespuesta = JSON.parse(ajax2.responseText);
           //console.log(miRespuesta);
           var numeroDeUsuario = miRespuesta['cantidad'];
-          alert('Bienvenido' + nombre + '!, ya hay ' + numeroDeUsuario + ' usuarios registrados.');
+          alert('Te registraste' + nombre + '!, ya hay ' + numeroDeUsuario + ' usuarios registrados.');
         }
       }
       ajax2.open("GET","https://sprint.digitalhouse.com/getUsuarios", false);
       ajax2.send();
     }
   }
-  
+
   ajax.open("GET","https://sprint.digitalhouse.com/nuevoUsuario", false);
   ajax.send();
 
