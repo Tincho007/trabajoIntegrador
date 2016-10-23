@@ -72,7 +72,7 @@ function validarEmail($regMail,$unique=FALSE,$exclude=FALSE){
     $regMail = trim($regMail);
 
     if ($regMail == ''){
-      return 'Su email está vacío';
+      return 'El email está vacío';
     } else {
       if (filter_var($regMail, FILTER_VALIDATE_EMAIL)){
 
@@ -227,7 +227,7 @@ function validarPassword($regPass){
     $regPass = trim($regPass);
 
     if ($regPass == ''){
-      return 'Su password está vacío';
+      return 'El password está vacío';
     } else {
       if (strlen($regPass) > 3 && preg_match($expresionPassword, $regPass)){
         return true;
@@ -242,7 +242,7 @@ function validarPasswordConfirm($regPass, $regRePass){
     $regRePass = trim($regRePass);
 
     if ($regRePass == ''){
-      return 'Tu confirmación de password está vacía';
+      return 'La confirmación de password está vacía';
     } else {
       if ($regPass === $regRePass){
         return true;
