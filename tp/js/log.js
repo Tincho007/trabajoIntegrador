@@ -10,34 +10,34 @@ ingresar.addEventListener('click',function(e){
   
   if(email.value == ""){
     console.log(email.value);
-    email.value = "completeSu@email";
+    email.value = "completaTu@email.com";
+    e.preventDefault();
     email.addEventListener ('focus',function(e) {
     email.value = "";
-    e.preventDefault();
   });
   }else if(!expRegMail.test(email.value)){
-    email.value = 'Formato de email inválido';
+    email.value = 'El email no es correcto';
+    e.preventDefault();
     email.addEventListener ('focus',function(e) {
     email.value = "";
-    e.preventDefault();
   });
   }
   
   if(contrasena.value == ""){
     contrasena.type = "text";
-    contrasena.value = 'Complete su contraseña';
+    contrasena.value = 'Completá la contraseña';
+    e.preventDefault();
     contrasena.addEventListener ('focus',function(e) {
     contrasena.type = "password";
     contrasena.value = "";
-    e.preventDefault();
   });
   } else if(!expRegPass.test(contrasena.value)){
     contrasena.type = "text";
-    contrasena.value = 'Su contraseña no es segura';
+    contrasena.value = 'La contraseña no es correcta';
+    e.preventDefault();
     contrasena.addEventListener ('focus',function(e) {
     contrasena.type = "password";
     contrasena.value = "";
-    e.preventDefault();
   });
   }
 })
