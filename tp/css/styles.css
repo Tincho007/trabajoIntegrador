@@ -520,6 +520,10 @@ dt{
 	color: #264663;
 	margin: 20px 0 10px 0;
 	cursor: pointer;
+	background-image: url('../img/flecha.svg');
+	background-repeat: no-repeat;
+	background-position: center right;
+	transition: .2s;
 }
 
 dd{
