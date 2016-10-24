@@ -1,15 +1,4 @@
 <?php ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>solucionado.com.ar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles_768.css">
-    <link rel="stylesheet" href="css/styles_400.css">
-  </head>
-  <body>
     <footer>
       <div id="social">
         <a href="mailto:contactenos@solucionado.com.ar"><img class="icon" src="img/mail.png"></a>
@@ -24,6 +13,4 @@
         </p>
       </div>
     </footer>
-  </body>
-</html>
 <?php ?>

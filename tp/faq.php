@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles_768.css">
     <link rel="stylesheet" href="css/styles_400.css">
+    <script type="text/javascript" src="js/log.js"></script>
   </head>
   <body>
     <?php require_once('header.php'); ?>
