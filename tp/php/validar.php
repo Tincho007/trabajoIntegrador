@@ -10,8 +10,8 @@ $barrio, $partido, $proveedorServ, $proveedorProd){
   $errores['cui'] = validarCui($cui);
   $errores['regPass'] = validarPassword($regPass);
   $errores['regRePass'] = validarPasswordConfirm($regPass, $regRePass);
-  $errores['regMail'] = validarEmail($regMail,TRUE);
-  $errores['reMail'] = validarEmailConfirm($reMail,TRUE);
+  $errores['regMail'] = validarEmail($regMail,true);
+  $errores['reMail'] = validarEmailConfirm($reMail,true);
   $errores['phone'] = validarPhone($phone);
   $errores['cel'] = validarCell($cel);
   $errores['calle'] = validarCalle($calle);
@@ -67,7 +67,7 @@ function validarApellido($lastName){
   }
 }
 
-function validarEmail($regMail,$unique=FALSE,$exclude=FALSE){
+function validarEmail($regMail,$unique=false,$exclude=false){
 
     $regMail = trim($regMail);
 
@@ -93,7 +93,7 @@ function validarEmail($regMail,$unique=FALSE,$exclude=FALSE){
     }
 }
 
-function buscarUsuarioPorEmail($regMail,$exclude=FALSE){
+function buscarUsuarioPorEmail($regMail,$exclude=false){
 
   $ruta = 'usuarios.json';
   $archivo = file_get_contents($ruta);
@@ -119,7 +119,7 @@ function buscarUsuarioPorEmail($regMail,$exclude=FALSE){
   return false;
 }
 
-function buscarProvServPorEmail($regMail,$exclude=FALSE){
+function buscarProvServPorEmail($regMail,$exclude=false){
 
   $ruta = 'proveedoresServicio.json';
   $archivo = file_get_contents($ruta);
@@ -145,7 +145,7 @@ function buscarProvServPorEmail($regMail,$exclude=FALSE){
   return false;
 }
 
-function buscarProvProdPorEmail($regMail,$exclude=FALSE){
+function buscarProvProdPorEmail($regMail,$exclude=false){
 
   $ruta = 'proveedoresProducto.json';
   $archivo = file_get_contents($ruta);
@@ -195,7 +195,7 @@ function buscarProvProdPorEmail($regMail,$exclude=FALSE){
   return false;
 }
 
-function validarNombreUsuario($userName,$unique=FALSE,$exclude=FALSE){
+function validarNombreUsuario($userName,$unique=false,$exclude=false){
 
   $expresionNombreUsuario = '/^[a-zA-ZáéíóúÁÉÍÓÚ]+$/';
   $userName = trim($userName);
@@ -270,7 +270,6 @@ $regMail, $reMail, $phone, $cel, $calle, $numero, $prov, $barrio, $partido){
   $usuario['reMail'] = $reMail;
   $usuario['regPass'] = sha1($regPass);
   $usuario['regRePass'] = sha1($regRePass);
-  $usuario['imagen'] = subirImagen($name, $lastName);
 
   return $usuario;
 }
@@ -294,7 +293,7 @@ $regMail, $reMail, $phone, $cel, $calle, $numero, $prov, $barrio, $partido, $pro
   $proveedorServicio['regPass'] = sha1($regPass);
   $proveedorServicio['regRePass'] = sha1($regRePass);
   $proveedorServicio['proveedorServ'] = ($proveedorServ);
-  $proveedorServicio['imagen'] = subirImagen($name, $lastName);
+  $proveedorServicio['doc_servicios'] = subirArchivoServ($name, $lastName);
 
   return $proveedorServicio;
 }
@@ -318,20 +317,34 @@ $regMail, $reMail, $phone, $cel, $calle, $numero, $prov, $barrio, $partido, $pro
   $proveedorProducto['regPass'] = sha1($regPass);
   $proveedorProducto['regRePass'] = sha1($regRePass);
   $proveedorProducto['proveedorServ'] = ($proveedorProd);
-  $proveedorProducto['imagen'] = subirImagen($name, $lastName);
+  $proveedorProducto['doc_productos'] = subirArchivoProd($name, $lastName);
 
   return $proveedorProducto;
 }
 
-function subirImagen($name, $lastName){
-  if (!empty($_FILES['imagen']['name'])){
+function subirArchivoServ($name, $lastName){
+  if (!empty($_FILES['doc_servicios']['name'])){
 
-    $info = pathinfo($_FILES['imagen']['name']);
+    $info = pathinfo($_FILES['doc_servicios']['name']);
     $extension = $info['extension'];
     $nombreArchivo = $name . $lastName . '.' . $extension;
-    $ruta = 'imagenesPerfil/' . $nombreArchivo;
+    $ruta = 'archivosUsuario/' . $nombreArchivo;
 
-    move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta);
+    move_uploaded_file($_FILES['doc_servicios']['tmp_name'], $ruta);
+
+    return $ruta;
+  }
+}
+
+function subirArchivoProd($name, $lastName){
+  if (!empty($_FILES['doc_productos']['name'])){
+
+    $info = pathinfo($_FILES['doc_productos']['name']);
+    $extension = $info['extension'];
+    $nombreArchivo = $name . $lastName . '.' . $extension;
+    $ruta = 'archivosUsuario/' . $nombreArchivo;
+
+    move_uploaded_file($_FILES['doc_productos']['tmp_name'], $ruta);
 
     return $ruta;
   }
