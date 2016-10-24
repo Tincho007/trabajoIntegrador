@@ -206,9 +206,10 @@ if (errores == false) {   //si no hay errores entonces hacer ajax
       var miRespuesta;
 
       ajax2.onreadystatechange = function() {
-        var nombre = document.getElementById('name');
 
         if (ajax2.readyState == 4 && ajax2.status == 200){
+          var nombre = document.getElementById('name');
+
           miRespuesta = JSON.parse(ajax2.responseText);
           //console.log(miRespuesta);
           var numeroDeUsuario = miRespuesta['cantidad'];
@@ -224,7 +225,6 @@ if (errores == false) {   //si no hay errores entonces hacer ajax
   ajax.send();
 
 }
-//
 
 });
 

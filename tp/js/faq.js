@@ -19,11 +19,11 @@ for (var i = 0; i < preguntas.length; i++) {
   };
 };*/
 
-$('dd').hide();
+  $('dd').hide();
 
-$('dt').click(function() {
-  var toggle = $(this).nextUntil('dt');
-  toggle.slideToggle();
-  $('dd').not(toggle).slideUp();
-})
+  $('dt').click(function() {
+    var toggle = $(this).nextUntil('dt');
+    toggle.slideToggle();
+    $('dd').not(toggle).slideUp();
+  })
 }
